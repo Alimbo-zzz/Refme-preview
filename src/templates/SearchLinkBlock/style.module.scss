@@ -1,0 +1,31 @@
+.wrap {
+	display: grid;
+	grid-template-columns: 1fr 460px;
+	grid-template-rows: 100px auto;
+	gap: var(--indent-48, 48px);
+	padding: var(--padding-page, 64px) 0;
+}
+
+
+.top {
+	grid-row: span 2;
+
+
+	&__pin {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		position: sticky;
+		top: 50px;
+	}
+}
+
+.search {
+	background-color: rgb(183, 183, 183);
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}

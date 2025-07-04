@@ -1,0 +1,64 @@
+.wrap {
+	display: grid;
+	grid-template-columns: 1fr 460px;
+	gap: 35px;
+	width: 100%;
+	height: 100vh;
+	padding: 25px;
+	overflow: hidden;
+}
+
+
+.preview {
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+
+
+	&__desc {
+		position: absolute;
+		z-index: 1;
+		left: 25px;
+		top: 28px;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		opacity: 0.6;
+
+		span {
+			font-size: 16px;
+		}
+
+		p {
+			font-size: 11.5px;
+		}
+	}
+
+	svg {
+		position: absolute;
+		right: 20px;
+		top: 25px;
+		z-index: 1;
+		opacity: 0.6;
+		font-size: 160px;
+		color: white;
+		translate: 0% -35%;
+	}
+
+	[alt=preview] {
+		z-index: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center bottom;
+	}
+}
+
+.content {
+	overflow: hidden;
+	overflow-y: auto;
+}
